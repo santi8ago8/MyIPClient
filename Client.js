@@ -6,19 +6,19 @@
 var needle = require('needle');
 var config = require("./config");
 
-
+console.log("sending data to server every " + parseInt(config.delay / 1000) + " secs.");
 var tick = function () {
 
-    console.log("sending data to server");
+    //console.log("sending data to server");
 
     needle.put(config.serverUrl, config.publicData, {json: true}, function (err, resp) {
-       if (err){
-           console.log("error sending data "+err);
-       }
+        if (err) {
+            console.log("error sending data " + err);
+        }
 
-        else{
-           console.log("sended data, resp: "+JSON.stringify(resp.body));
-       }
+        else {
+            //console.log("sended data, resp: "+JSON.stringify(resp.body));
+        }
     });
 
 
