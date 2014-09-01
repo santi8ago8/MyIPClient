@@ -1,0 +1,8 @@
+{
+  "name": "MyIPClient",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "needle": "~0.7.9"
+  }
+}
